@@ -5,7 +5,8 @@
   <div class="row">
     <div class="col-md-2">
       <section class="chef_info center">
-
+        <%= gravatar_for recipe.chef, size: 80 %>
+        <h5>Chef Name: <%= recipe.chef.chefname %></h5>
       </section>
     </div>
     <div class="col-lg-8 well">
@@ -15,5 +16,6 @@
         <span class="quiet"><small><%= time_ago_in_words(recipe.created_at) %></small></span>
       </p>
     </div>
+    <hr/>
   </div>
 <% end %>
